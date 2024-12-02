@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Растения - Houseplant</title>
+  <!-- Иконка для стандартных браузеров -->
+  <link rel="icon" href="favicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Шапка сайта -->
+  <header class="header">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+          <ul class="navbar-nav w-100 d-flex justify-content-between align-items-center">
+            <li class="nav-item">
+              <input type="text" id="searchInput" placeholder="ПОИСК" class="search-input">
+              <div id="searchResults" class="search-results"></div>
+            </li>  
+            <li class="nav-item">
+              <a class="nav-link" href="watering-schedule.html">График полива</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="plants.html">Растения</a>
+            </li>
+            <li class="nav-item mx-auto">
+              <a class="navbar-brand" href="index.html">
+                <img src="Group 1.png" alt="Логотип" class="logo">
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="care.html">Советы по уходу</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about-us.html">О нас</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Контакты</a>
+            </li>
+            <!-- Иконка для модального окна -->
+            <li class="nav-item">
+              <button class="btn btn-link p-0" onclick="openModal()" title="Сохранённые графики">
+                <img src="icon-schedule.png" alt="Иконка графиков" class="icon-schedule" style="width: 32px; height: 32px;">
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Модальное окно -->
+  <div id="scheduleModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h2>Сохранённые графики полива</h2>
+      <div id="savedSchedules"></div>
+    </div>
+  </div>
+
+
+  <main class="main-content-plants" style="background-color: #ECAEB7;">
+    <!-- Заголовок страницы -->
+    <section class="section-header text-center">
+        <h2 class="white-text">Ваш гид по поливу и уходу за растениями!</h2>
+    </section>
+
+    <!-- Кнопки категорий -->
+    <section class="category-buttons text-center">
+        <div class="d-flex flex-wrap justify-content-center">
+          <button class="category-button" data-category="all">Все</button>
+          <button class="category-button" data-category="popular">Популярные</button>
+          <button class="category-button" data-category="sun">Солнечные</button>
+          <button class="category-button" data-category="kitchen">Для кухни</button>
+          <button class="category-button" data-category="shady">Теневые</button>
+          <button class="category-button" data-category="bedroom">Для спальни</button>
+        </div>
+      </section>
+      
+
+    <!-- Карточки растений -->
+    <section class="plant-cards d-flex justify-content-center flex-wrap mt-4 popular-plants">
+      <h2 class="category-title">Популярные</h2>
+      <div class="plant-card">
+            <img src="фото/потос.webp" alt="Растение 1">
+            <div class="plant-card-title">Потос</div>
+            <div class="plant-card-info">- Быстрорастущее вьющееся растение с сердцевидными листьями. Может расти в различных условиях и требует умеренного полива. Отлично подходит для начинающих.</div>
+            <a href="pothos.html" class="read-more-button">Читать далее</a>
+          </div>
+        <div class="plant-card">
+            <img src="фото/фиалка.jpg" alt="Растение 2">
+            <div class="plant-card-title">Фиалка</div>
+            <div class="plant-card-info">- Невысокое цветущее растение с яркими листьями. Требует яркого, но рассеянного света и регулярного полива. Легко размножается черенками. Могут цвести круглый год.</div>
+            <a href="violet.html" class="read-more-button">Читать далее</a>
+        </div>
+        <div class="plant-card">
+            <img src="фото/алоэ.jpg" alt="Растение 3">
+            <div class="plant-card-title">Алоэ вера</div>
+            <div class="plant-card-info">- Суккулентное растение, известное своими целебными свойствами. Любит солнечный свет и требует редкого полива. Отлично подходит для дома и офиса.</div>
+            <a href="aloe-vera.html" class="read-more-button">Читать далее</a>
+          </div>
+        <div class="plant-card">
+            <img src="фото/орхидея.jpg" alt="Растение 4">
+            <div class="plant-card-title">Орхидея</div>
+            <div class="plant-card-info">- Элегантное цветущее растение, требующее немного больше внимания. Предпочитает яркий, но рассеянный свет и высокую влажность. Уход требует знания особенностей вида.</div>
+            <a href="orchid.html" class="read-more-button">Читать далее</a>
+          </div>
+        <div class="plant-card">
+            <img src="фото/Хлорофитум.jpg" alt="Растение 5">
+            <div class="plant-card-title">Хлорофитум</div>
+            <div class="plant-card-info">-Красивое растение. Легкое в уходе растение с длинными извитими листьями и воздушными корешками. Хорошо очищает воздух и приспособляется к различным условиям.</div>
+            <a href="chlorophytum.html" class="read-more-button">Читать далее</a>
+          </div>
+    </section>
+
+    <section class="plant-cards d-flex justify-content-center flex-wrap mt-4 sun-plants">
+      <h2 class="category-title">Солнечные</h2>  
+      <div class="plant-card">
+            <img src="фото/Суккуленты.jpg" alt="Растение 6">
+            <div class="plant-card-title">Суккуленты</div>
+            <div class="plant-card-info">- Эти растения хорошо приспособлены к засушливым условиям и нуждаются в ярком солнечном свете. Самые популярные виды: алоэ, эхеверия, юкка.</div>
+            <a href="succulents.html" class="read-more-button">Читать далее</a>
+          </div>
+        <div class="plant-card">
+            <img src="фото/Гербера.webp" alt="Растение 7">
+            <div class="plant-card-title">Гербера</div>
+            <div class="plant-card-info">- Красивое цветущее растение, которому нужно много света для обильного цветения. Хорошо подойдут для букетов. Предпочитает яркий, но рассеянный свет.</div>
+            <a href="gerbera.html" class="read-more-button">Читать далее</a>
+          </div>
+        <div class="plant-card">
+            <img src="фото/лаванда.jpg" alt="Растение 8">
+            <div class="plant-card-title">Лаванда</div>
+            <div class="plant-card-info">- Жизнестойкое растение. Включает в себя более 47 видов. Помогает создать приятный аромат в доме и может использоваться в кулинарии.</div>
+            <a href="lavanda.html" class="read-more-button">Читать далее</a>
+          </div>
+        <div class="plant-card">
+            <img src="фото/агавы.jpg" alt="Растение 9">
+            <div class="plant-card-title">Агавы</div>
+            <div class="plant-card-info">- Эти растения также любят солнечные места и могут расти в довольно жарких условиях. Они становятся очень декоративными при правильном уходе.</div>
+            <a href="agave.html" class="read-more-button">Читать далее</a>
+          </div>
+        <div class="plant-card">
+            <img src="фото/кактус.jpg" alt="Растение 10">
+            <div class="plant-card-title">Кактусы</div>
+            <div class="plant-card-info">- Кактусы обожают яркий солнечный свет и требуют редкого полива. Их разнообразие позволяет выбрать подходящий по размеру и форме.</div>
+            <a href="cacti.html" class="read-more-button">Читать далее</a>
+          </div>
+    </section>
+
+    <section class="plant-cards d-flex justify-content-center flex-wrap mt-4 shady-plants">
+      <h2 class="category-title">Теневые</h2>  
+      <div class="plant-card">
+            <img src="фото/аглаонема.jpeg" alt="Растение 11">
+            <div class="plant-card-title">Аглаонема</div>
+            <div class="plant-card-info">— это растение имеет красивые листья, которые могут быть разных цветов, и оно популярно за свою выносливость в условиях низкой освещенности.</div>
+            <a href="aglaonema.html" class="read-more-button">Читать далее</a>
+          </div>
+        <div class="plant-card">
+            <img src="фото/каладий.webp" alt="Растение 12">
+            <div class="plant-card-title">Каладий</div>
+            <div class="plant-card-info">— Декоративное лиственное растение с яркими листьями, которое также предпочитает полутень. Включает в себя более 15000 видов в Бразилии.</div>
+            <a href="caladium.html" class="read-more-button">Читать далее</a>
+          </div>
+        <div class="plant-card">
+            <img src="фото/бегония.webp" alt="Растение 13">
+            <div class="plant-card-title">Бегония</div>
+            <div class="plant-card-info">— Некоторые виды бегоний прекрасно себя чувствуют в условиях недостаточного света и радуют глаз красивыми листьями и цветами. Более 1600 видов.</div>
+            <a href="begonia.html" class="read-more-button">Читать далее</a>
+          </div>
+        <div class="plant-card">
+            <img src="фото/камелия.jpg" alt="Растение 14">
+            <div class="plant-card-title">Камелия</div>
+            <div class="plant-card-info"> —Вечнозеленое растение семейства Чайные - это растение предпочитает полутень и обладает красивыми цветами, которые украсят ваше помещение.</div>
+            <a href="camellia.html" class="read-more-button">Читать далее</a>
+          </div>
+        <div class="plant-card">
+            <img src="фото/филодендрон.webp" alt="Растение 15">
+            <div class="plant-card-title">Филодендрон</div>
+            <div class="plant-card-info">— Неприхотливое растение с декоративными листьями, которое также не требует много света и может расти в тени. Имеется более 900 видов.</div>
+            <a href="philodendron.html" class="read-more-button">Читать далее</a>
+          </div>
+    </section>
+
+    <section class="plant-cards d-flex justify-content-center flex-wrap mt-4 kitchen-plants">
+      <h2 class="category-title">Для кухни</h2>  
+      <div class="plant-card">
+            <img src="фото/базилик.webp" alt="Растение 16">
+            <div class="plant-card-title">Базилик</div>
+            <div class="plant-card-info">- Ароматное растение, часто используемое в кулинарии. Требует яркого солнечного света и регулярного полива.</div>
+            <a href="basil.html" class="read-more-button">Читать далее</a>
+          </div>
+        <div class="plant-card">
+            <img src="фото/петрушка.webp" alt="Растение 17">
+            <div class="plant-card-title">Петрушка</div>
+            <div class="plant-card-info">- Популярное пряное растение, которое легко выращивать в домашних условиях. Предпочитает яркое, освещение.</div>
+            <a href="parsley.html" class="read-more-button">Читать далее</a>     
+          </div>
+        <div class="plant-card">
+            <img src="фото/мелисса.jpg" alt="Растение 18">
+            <div class="plant-card-title">Мелисса</div>
+            <div class="plant-card-info">- Растение с лимонным ароматом, отлично подходит для чая и кулинарии. Требует солнечного света и регулярного полива.</div>
+            <a href="melissa.html" class="read-more-button">Читать далее</a>
+          </div>
+        <div class="plant-card">
+            <img src="фото/череда.jpg" alt="Растение 19">
+            <div class="plant-card-title">Череда</div>
+            <div class="plant-card-info">- Лекарственное растение для настоев и чаев. Предпочитает солнечные места и хорошо растет в саду или на балконе.</div>
+            <a href="chamomile.html" class="read-more-button">Читать далее</a>
+          </div>
+        <div class="plant-card">
+            <img src="фото/кинза.webp" alt="Растение 20">
+            <div class="plant-card-title">Кинза</div>
+            <div class="plant-card-info">- Ароматное растение, используемое в кулинарии. Легко растить в горшках на подоконнике или балконе.</div>
+            <a href="cilantro.html" class="read-more-button">Читать далее</a>
+          </div>
+    </section>
+
+    <section class="plant-cards d-flex justify-content-center flex-wrap mt-4 bedroom-plants">
+      <h2 class="category-title">Для спальни</h2>  
+      <div class="plant-card">
+            <img src="фото/Сансевиерия.webp" alt="Растение 21">
+            <div class="plant-card-title">Сансевиерия</div>
+            <div class="plant-card-info">- Неприхотливое растение, которое очищает воздух и хорошо растет в тени. Требует редкого полива.</div>
+            <a href="sansevieria.html" class="read-more-button">Читать далее</a>
+          </div>
+        <div class="plant-card">
+            <img src="фото/Спатифиллум.jpeg" alt="Растение 22">
+            <div class="plant-card-title">Спатифиллум</div>
+            <div class="plant-card-info">- Элегантное растение с белыми цветами, предпочитает умеренную тень на балконе и требует умеренного полива.</div>
+            <a href="spathiphyllum.html" class="read-more-button">Читать далее</a>
+          </div>
+        <div class="plant-card">
+            <img src="фото/узумбарская-фиалка.jpg" alt="Растение 23">
+            <div class="plant-card-title">Узумбарская фиалка</div>
+            <div class="plant-card-info">- Небольшое цветущее растение, требующее рассеянного света и регулярного полива. Украсит любую спальню.</div>
+            <a href="uzumbara-violet.html" class="read-more-button">Читать далее</a>
+          </div>
+        <div class="plant-card">
+            <img src="фото/папоротник.webp" alt="Растение 24">
+            <div class="plant-card-title">Папоротник</div>
+            <div class="plant-card-info">- Появился 400 млн лет назад. Любит влагу и тень. Удобно размещать на подоконниках или в углах спальни.</div>
+            <a href="fern.html" class="read-more-button">Читать далее</a>
+          </div>
+        <div class="plant-card">
+            <img src="фото/герань.jpg" alt="Растение 25">
+            <div class="plant-card-title">Герань</div>
+            <div class="plant-card-info">- Приятный аромат и красивые цветы, требует солнечного света и умеренного полива. Более 400 видов.</div>
+            <a href="geranium.html" class="read-more-button">Читать далее</a>
+        </div>
+    </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script> 
+
+<button id="scrollToTop" style="display: none;">↑ Наверх</button>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content d-flex justify-content-between align-items-center">
+        <p>&copy; 2024 Houseplant. Все права защищены.</p>
+        <div class="footer-links">
+          <a href="privacy.html" class="footer-link">Политика конфиденциальности</a>
+          <a href="terms.html" class="footer-link">Условия использования</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Гербера - Houseplant</title>
+  <link rel="icon" href="favicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Шапка сайта -->
+  <header class="header">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+          <ul class="navbar-nav w-100 d-flex justify-content-between align-items-center">
+            <li class="nav-item">
+              <input type="text" id="searchInput" placeholder="ПОИСК" class="search-input">
+              <div id="searchResults" class="search-results"></div>
+            </li>  
+            <li class="nav-item">
+              <a class="nav-link" href="watering-schedule.html">График полива</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="plants.html">Растения</a>
+            </li>
+            <li class="nav-item mx-auto">
+              <a class="navbar-brand" href="index.html">
+                <img src="Group 1.png" alt="Логотип" class="logo">
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="care.html">Советы по уходу</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about-us.html">О нас</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Контакты</a>
+            </li>
+            <!-- Иконка для модального окна -->
+            <li class="nav-item">
+              <button class="btn btn-link p-0" onclick="openModal()" title="Сохранённые графики">
+                <img src="icon-schedule.png" alt="Иконка графиков" class="icon-schedule" style="width: 32px; height: 32px;">
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Основная часть сайта -->
+  <main class="main-content d-flex">
+    <!-- Левая часть с текстом -->
+    <section class="left-side text-center">
+      <main class="container mt-5">
+        <h1 class="text-center">Гербера</h1>
+        <div class="row align-items-center">
+            <div class="col-md-12 plant-info">
+                <h3>Описание</h3>
+                <p>Гербера — это яркое цветущее растение с крупными цветками, которые могут иметь различные цвета. Они часто используются в букетах и композициях.</p>
+                
+                <h3>Уход за герберой</h3>
+                <ul>
+                    <li><strong>Полив:</strong> Поливайте, когда верхний слой почвы высохнет. Не допускайте застоя воды.</li>
+                    <li><strong>Освещение:</strong> Яркий солнечный свет, прямое солнце — только утром или вечером.</li>
+                    <li><strong>Температура:</strong> Оптимальная температура — от 18°C до 22°C.</li>
+                </ul>
+                <h3>Размножение</h3>
+                <p>Размножается делением корней или семенами.</p>
+
+                <h3>Проблемы и болезни</h3>
+                <ul>
+                    <li><strong>Увядание листьев:</strong> Может быть вызвано недостатком влаги или чрезмерным поливом.</li>
+                    <li><strong>Паразиты:</strong> Проверяйте на наличие паутинных клещей и мучнистых червецов.</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    </section>
+    <!-- Правая часть с изображением -->
+    <section class="right-side">
+      <img src="фото/Гербера.webp" alt="гербера" class="image">
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content d-flex justify-content-between align-items-center">
+        <p>&copy; 2024 Houseplant. Все права защищены.</p>
+        <div class="footer-links">
+          <a href="privacy.html" class="footer-link">Политика конфиденциальности</a>
+          <a href="terms.html" class="footer-link">Условия использования</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
