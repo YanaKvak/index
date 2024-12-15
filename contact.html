@@ -152,5 +152,42 @@
         });
     }
   </script>
+
+<script type="text/javascript">
+  document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Останавливаем перезагрузку страницы
+    
+    // Получаем данные формы
+    var formData = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      number: document.getElementById("number").value,
+      message: document.getElementById("message").value
+    };
+
+    // Адрес вашего опубликованного веб-приложения
+    var url = "https://script.google.com/macros/s/AKfycbzpY-T9qWFeIWtYIZc4BE1AysEJaJ94dzFj7D_8T0ZpS2R7euz8ei1EJFKR4aKmMibtHA/exec";
+
+    // Отправляем данные на Google Apps Script через Fetch API
+    fetch(url, {
+      method: "POST",
+      body: JSON.stringify(formData),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+    .then(response => response.text())
+    .then(data => {
+      alert("Данные успешно сохранены в таблице!");
+      // Очистка формы после отправки
+      document.getElementById("contactForm").reset();
+    })
+    .catch(error => {
+      console.error("Ошибка:", error);
+      alert("Не удалось сохранить данные.");
+    });
+  });
+</script>
+
 </body>
 </html>

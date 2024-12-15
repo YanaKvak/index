@@ -52,15 +52,15 @@ body {
 
 .left-side h1 {
   color: #625C58;
-  font-size: 56px;
-  font-weight: 400;
+  font-size: 70px;
+  font-weight: 300;
   text-align: center;
 }
 
 .left-side .highlight {
   color: #D05E7E;
-  font-size: 43px;
-  font-weight: 400;
+  font-size: 47px;
+  font-weight: 300;
 }
 
 .right-side {
