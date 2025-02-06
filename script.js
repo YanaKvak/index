@@ -179,3 +179,11 @@ if (searchInput && searchResults) {
         }
     });
 }
+  document.addEventListener("DOMContentLoaded", function () {
+    let phoneLinks = document.querySelectorAll('a[href^="tel:"]'); // Находит все ссылки с телефоном
+    phoneLinks.forEach(function (link) {
+      link.addEventListener("click", function () {
+        ym(99817498, "reachGoal", "phone_click"); // Отправка события в Яндекс.Метрику
+      });
+    });
+  });
